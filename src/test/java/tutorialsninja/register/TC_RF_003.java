@@ -34,7 +34,7 @@ public class TC_RF_003 {
 		Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());
 		Assert.assertTrue(driver.findElement(By.linkText("Success")).isDisplayed());
 		String accountCreatedText = driver.findElement(By.xpath("//div[@id='content']/h1")).getText();
-		Assert.assertEquals("Your Account Has Been Created!", accountCreatedText);
+		Assert.assertEquals(accountCreatedText, "Your Account Has Been Created!");
 		String confirmText1 = "Congratulations! Your new account has been successfully created!";
 		String confirmText2 = "You can now take advantage of member privileges to enhance your online shopping experience with us.";
 		String confirmText3 = "If you have ANY questions about the operation of this online shop, please e-mail the store owner.";

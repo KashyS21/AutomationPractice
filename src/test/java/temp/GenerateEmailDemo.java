@@ -6,15 +6,17 @@ public class GenerateEmailDemo {
 
 	public static void main(String[] args) {
 
-		Date date=new Date();
-		//System.out.println(date);
-		String dateString= date.toString();
-		String noSpaceDateString=dateString.replaceAll("\\s", "");
-		//System.out.println(noSpaceDateString);
-		String noSpaceandNoColons = noSpaceDateString.replaceAll("\\:", "");
-		//System.out.println(noSpaceandNoColons);
-		String emailWithTimeStamp= noSpaceandNoColons + "@gmail.com";
-		System.out.println(emailWithTimeStamp);
+       Date date=new Date();
+        System.out.println(date);
+       String dateInStringFormat=date.toString();
+        System.out.println(dateInStringFormat);
+        String dateWithoutSpaces=dateInStringFormat.replaceAll("\\s","");
+        System.out.println(dateWithoutSpaces);
+        String dateWithoutTimeStamp=dateWithoutSpaces.replaceAll("\\:","");
+       String emailGenerated=dateWithoutTimeStamp + "@gmail.com";
+        System.out.println(emailGenerated);
+
+
 
 	}
 
